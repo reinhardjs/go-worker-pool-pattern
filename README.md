@@ -1,12 +1,12 @@
 # Go Concurrency Patterns: Worker Pool
 
-This repository demonstrates the evolution of the **Worker Pool Pattern** in Go (Golang). It progresses from a simple, fixed-size goroutine pool to complex, production-ready HTTP implementations using Fan-In/Fan-Out strategies.
+This repository demonstrates the evolution of the **Worker Pool Pattern** in Go (Golang). It progresses from a simple, fixed-size goroutine pool to complex, production-ready HTTP implementations using Fan-In/Fan-Out strategies and Unbounded Queues.
 
 These examples are designed to illustrate how to manage limited resources (CPU/RAM) efficiently while handling high-volume workloads.
 
 ## 📂 Repository Structure
 
-The code is organized into four distinct levels of complexity:
+The code is organized into five distinct levels of complexity:
 
 | Folder | Pattern Name | Use Case |
 | :--- | :--- | :--- |
@@ -14,6 +14,7 @@ The code is organized into four distinct levels of complexity:
 | **`02-robust-pool`** | Pool with Results | ETL jobs, image processing where output is needed. |
 | **`03-http-fire-and-forget`** | Daemon / Async Pool | HTTP requests that trigger long-running background tasks. |
 | **`04-http-fan-in-fan-out`** | Aggregator Pattern | Dashboard APIs requiring data from multiple sources simultaneously. |
+| **`05-unlimited-queue`** | **Unbounded Queue** | Critical ingestion where **dropping requests is impossible** and submission must never block. |
 
 ---
 
